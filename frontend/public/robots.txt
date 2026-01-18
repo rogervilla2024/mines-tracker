@@ -1,0 +1,25 @@
+# robots.txt for minestracker.com
+# Generated: 2026-01-18
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://minestracker.com/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Disallow admin and API endpoints
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /static/chunks/
+
+# Allow important resources
+Allow: /articles/
+Allow: /*.css
+Allow: /*.js
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.svg

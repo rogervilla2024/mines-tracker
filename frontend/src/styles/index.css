@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --mines-primary: #27ae60;
+  --mines-secondary: #2ecc71;
+  --mines-accent: #f1c40f;
+  --mines-danger: #e74c3c;
+}
+
+body {
+  @apply bg-mines-darker text-slate-100 antialiased;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Gradient text for branding */
+.gradient-text {
+  @apply bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent;
+}
+
+/* Card styling */
+.card {
+  @apply bg-slate-800/50 backdrop-blur-sm rounded-xl p-4 border border-slate-700/50;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-500;
+}
+
+/* Hide scrollbar but keep functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Mines-specific animations */
+@keyframes tile-flip {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(90deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+.animate-flip {
+  animation: tile-flip 0.4s ease-in-out;
+}
+
+@keyframes gem-sparkle {
+  0%, 100% {
+    filter: brightness(1) drop-shadow(0 0 3px rgba(39, 174, 96, 0.5));
+  }
+  50% {
+    filter: brightness(1.2) drop-shadow(0 0 8px rgba(39, 174, 96, 0.8));
+  }
+}
+
+.animate-gem {
+  animation: gem-sparkle 2s ease-in-out infinite;
+}
+
+@keyframes mine-pulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.05);
+    filter: brightness(1.3);
+  }
+}
+
+.animate-mine {
+  animation: mine-pulse 1s ease-in-out infinite;
+}
+
+/* Tile states */
+.tile-hidden {
+  @apply bg-gradient-to-br from-slate-600 to-slate-700 hover:from-slate-500 hover:to-slate-600 cursor-pointer;
+}
+
+.tile-gem {
+  @apply bg-gradient-to-br from-green-600 to-emerald-700;
+}
+
+.tile-mine {
+  @apply bg-gradient-to-br from-red-600 to-red-800;
+}
+
+/* Grid cell styling */
+.mines-grid-cell {
+  @apply aspect-square rounded-lg flex items-center justify-center text-2xl font-bold transition-all duration-200;
+  perspective: 1000px;
+}
+
+/* Probability indicator colors */
+.prob-high { @apply text-green-400; }
+.prob-medium { @apply text-yellow-400; }
+.prob-low { @apply text-orange-400; }
+.prob-danger { @apply text-red-400; }
+
+/* Multiplier colors for Mines */
+.mult-low { @apply text-green-400; }
+.mult-medium { @apply text-emerald-400; }
+.mult-good { @apply text-teal-400; }
+.mult-great { @apply text-cyan-400; }
+.mult-excellent { @apply text-blue-400; }
+.mult-moon { @apply text-purple-400; }
