@@ -262,6 +262,27 @@ function HomePage({ summary, recentGames, loading, refetch }) {
       <main className="max-w-7xl mx-auto px-4 py-6">
         <h1 className="sr-only">Mines Game Statistics - Probability Calculator & Simulator</h1>
 
+        {/* About Game Section */}
+        <section className="mb-6">
+          <div className="card p-6">
+            <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
+              <span>💎</span>
+              What is Mines?
+            </h2>
+            <div className="space-y-4 text-sm text-slate-300">
+              <p>Mines is Spribe's strategic instant win game that brings the classic Minesweeper concept to the casino floor. Released in 2019 alongside Aviator, Mines offers players direct control over their risk level through a 5x5 grid where hidden gems and mines await discovery. Each revealed gem increases your multiplier; hit a mine and lose everything.</p>
+              <p>What makes Mines unique among instant win games is the granular risk control. Players choose how many mines to place (1-24), dramatically affecting the odds and potential rewards. One mine means high probability but low multipliers; twenty-four mines means near-impossible odds but astronomical payouts if you find that single gem. This flexibility appeals to both cautious and aggressive players.</p>
+              <p>The mathematics are transparent: with 5 mines, revealing 5 gems has roughly a 25% success chance for a 2.8x multiplier. The 97% RTP applies across all configurations, though variance increases significantly with more mines. The probability calculator above helps you understand exact odds for any combination of mines and gems revealed.</p>
+              <p>Unlike crash games where timing matters, Mines is purely about risk assessment. However, each tile is randomly assigned at round start - no pattern recognition can identify safe tiles. The grid visualizer demonstrates mechanics but uses simulated outcomes. Real gameplay uses provably fair cryptographic systems. Play mindfully within your budget.</p>
+            </div>
+            <div className="mt-4 pt-4 border-t border-slate-700/50 flex flex-wrap gap-2">
+              <span className="px-3 py-1 bg-slate-700/50 rounded-full text-xs text-slate-400">RTP: 97%</span>
+              <span className="px-3 py-1 bg-slate-700/50 rounded-full text-xs text-slate-400">Provider: Spribe</span>
+              <span className="px-3 py-1 bg-slate-700/50 rounded-full text-xs text-slate-400">Max: 5,000x</span>
+            </div>
+          </div>
+        </section>
+
         {/* Stats Row */}
         <section className="mb-6">
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">

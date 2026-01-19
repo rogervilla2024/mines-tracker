@@ -47,9 +47,9 @@ function App() {
         <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="/terms" element={<TermsPage />} />
         <Route path="/responsible-gambling" element={<ResponsibleGamblingPage />} />
-        <Route path="/contact" element={<ContactPage />
+        <Route path="/contact" element={<ContactPage />} />
         {/* Article Pages */}
-        <Route path="/:slug" element={<ArticlePage />} />} />
+        <Route path="/:slug" element={<ArticlePage />} />
       </Routes>
     </Layout>
   )

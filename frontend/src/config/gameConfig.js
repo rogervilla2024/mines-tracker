@@ -21,7 +21,7 @@ export const GAME_CONFIG = {
   maxMines: 24,
 
   // Branding
-  domain: 'minestracker.com',
+  domain: 'minesstats.com',
   trademark: 'Mines™ is a trademark of Spribe.',
   description: 'Minesweeper-style game where you reveal gems and avoid mines.',
 
@@ -52,14 +52,14 @@ export const GAME_CONFIG = {
 
   // Contact
   emails: {
-    contact: 'contact@minestracker.com',
-    legal: 'legal@minestracker.com',
-    privacy: 'privacy@minestracker.com',
+    contact: 'contact@minesstats.com',
+    legal: 'legal@minesstats.com',
+    privacy: 'privacy@minesstats.com',
   },
 
   // SEO
   seo: {
-    title: 'Mines Tracker - Statistics & Probability Calculator',
+    title: 'Mines Stats - Statistics & Probability Calculator',
     description: 'Mines game statistics, probability tables, and payout calculator. Understand the math behind the gems.',
     keywords: ['mines game', 'mines spribe', 'mines statistics', 'mines calculator', 'mines rtp'],
   },
